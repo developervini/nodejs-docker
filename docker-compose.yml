@@ -1,0 +1,9 @@
+nodejs-docker:
+  image: node
+  container_name: nodejs
+  volumes:
+    - ./:/usr/src/app
+  working_dir: /usr/src/app
+  command: node index.js
+  ports: 
+    - 3000:3000
