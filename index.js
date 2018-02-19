@@ -1,5 +1,12 @@
-var http = require('http');
-http.createServer(function (req, res) {
-    res.end('Hello World');
-}).listen(3000);
-console.log('Servidor iniciado em localhost:3000. Ctrl+C para encerra!');
+const express = require('express')
+const app = module.exports = express()
+
+app.get('/', (req, res) =>{
+    res.json('Hello World');
+})
+
+app.get('/yourname/:name', (req, res) => {
+    res.json(req.params);    
+})
+
+app.listen(3000);
