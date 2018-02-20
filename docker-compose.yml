@@ -4,6 +4,6 @@ nodejs-docker:
   volumes:
     - ./:/usr/src/app
   working_dir: /usr/src/app
-  command: npm start
+  command: bash -c "sudo npm install && node index.js"
   ports: 
     - 3000:3000
